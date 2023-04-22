@@ -1,0 +1,9 @@
+Use touch id in mac pro for all sudo commands.
+
+List the content(to check if file exists):
+cat /etc/pam.d/sudo
+
+Edit the sudo file and append the below line:
+auth sufficient pam_tid.so
+
+Enjoy!!
