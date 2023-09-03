@@ -1,0 +1,9 @@
+#create a file in /root/cronbackup/script.sh
+#content of the file: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/slcakWebHookURL'
+
+* * * * * bash /root/cronbackup/script.sh>> /tmp/date.log
+* * * * * sleep 10; bash /root/cronbackup/script.sh>> /tmp/date.log
+* * * * * sleep 20; bash /root/cronbackup/script.sh>> /tmp/date.log
+* * * * * sleep 30; bash /root/cronbackup/script.sh>> /tmp/date.log
+* * * * * sleep 40; bash /root/cronbackup/script.sh>> /tmp/date.log
+* * * * * sleep 50; bash /root/cronbackup/script.sh>> /tmp/date.log
