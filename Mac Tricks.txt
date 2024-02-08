@@ -7,3 +7,7 @@ Edit the sudo file and append the below line (should be top line):
 auth sufficient pam_tid.so
 
 Enjoy!!
+
+
+Scan local network
+arp-scan --interface=en0 --localnet
