@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Downloading all repositories from a GitLab group or user account.
+
+# Set your GitLab access token
+ACCESS_TOKEN="YOUR_ACCESS_TOKEN"
+
+# Example of GitLab API endpoint for listing projects in a group
+API_URL="https://gitlab.com/api/v4/groups/psono/projects?access_token=$ACCESS_TOKEN"
+
+# Get the list of project URLs
+PROJECT_URLS=$(curl -s "$API_URL" | jq -r '.[].http_url_to_repo')
+
+# Clone each repository
+for URL in $PROJECT_URLS; do
+    git clone "$URL"
+done
