@@ -1,0 +1,8 @@
+Download Apple macOS (ARM64) pkg from https://go.dev/dl/
+
+Install it.
+
+Add below line in your .zprofile or .bashrc as per your shell(which $SHELL)
+export PATH="$HOME/go/bin:$PATH"
+
+That's it!
